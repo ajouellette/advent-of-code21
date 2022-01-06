@@ -51,6 +51,12 @@ def main():
         print(octopi, new_flashes, "\n")
     print(total_flashes)
 
+    # part 2
+    while new_flashes != np.prod(octopi.shape):
+        octopi, new_flashes = step(octopi)
+        i += 1
+    print("All octopi synchonized at step", i+1)
+
 
 if __name__ == "__main__":
     main()
